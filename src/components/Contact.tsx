@@ -39,7 +39,7 @@ const Contact = () => {
     }
 
     // Formatação da mensagem para WhatsApp
-    const whatsappMessage = `*Solicitação de Orçamento - J.Gas*
+    const whatsappMessage = `*Solicitação de Orçamento - S-Gás*
 
 *Nome:* ${formData.name}
 *Telefone:* ${formData.phone}
@@ -111,7 +111,7 @@ _Mensagem enviada através do site_`;
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">contato@jgas.com.br</p>
+                <p className="text-lg">contato@sgas.com.br</p>
                 <p className="text-sm text-gray-300">Respondemos em até 24h</p>
               </CardContent>
             </Card>

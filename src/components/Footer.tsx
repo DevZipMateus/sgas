@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo e descrição */}
           <div className="md:col-span-2">
-            <img src="/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png" alt="J.Gas" className="h-16 mb-4" />
+            <img src="/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png" alt="S-Gás" className="h-16 mb-4" />
             <p className="text-gray-300 mb-4 max-w-md">
               Especialistas em soluções completas para gás GLP. Locação de tanques, manutenção de redes e vendas com parceria PrimeGás.
             </p>
@@ -40,7 +39,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-jgas-yellow flex-shrink-0" />
-                <span className="text-gray-300">contato@jgas.com.br</span>
+                <span className="text-gray-300">contato@sgas.com.br</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-jgas-yellow flex-shrink-0" />
@@ -55,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 J.Gas - Todos os direitos reservados. Desenvolvido com tecnologia de ponta.</p>
+          <p>&copy; 2024 S-Gás - Todos os direitos reservados. Desenvolvido com tecnologia de ponta.</p>
         </div>
       </div>
     </footer>

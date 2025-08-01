@@ -44,7 +44,7 @@ const Hero = () => {
         <div className="relative">
           <div className="bg-gradient-to-br from-jgas-yellow/20 to-transparent p-8 rounded-2xl backdrop-blur-sm border border-jgas-yellow/30">
             <div className="bg-white/10 p-6 rounded-xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Por que escolher a J.Gas?</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Por que escolher a S-Gás?</h3>
               <ul className="space-y-3 text-white">
                 <li className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-jgas-yellow rounded-full"></div>

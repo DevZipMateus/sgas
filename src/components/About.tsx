@@ -15,10 +15,10 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-jgas-black mb-6">
-              Sobre a J.Gas
+              Sobre a S-Gás
             </h2>
             <p className="text-lg text-jgas-gray mb-6 leading-relaxed">
-              A J.Gas é uma empresa especializada em soluções completas para gás GLP, atuando no mercado há mais de 10 anos. 
+              A S-Gás é uma empresa especializada em soluções completas para gás GLP, atuando no mercado há mais de 10 anos. 
               Nossa missão é fornecer serviços de alta qualidade com segurança e confiabilidade.
             </p>
             <p className="text-lg text-jgas-gray mb-8 leading-relaxed">

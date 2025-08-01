@@ -23,7 +23,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4 text-jgas-yellow" />
-              <span>contato@jgas.com.br</span>
+              <span>contato@sgas.com.br</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -35,7 +35,7 @@ const Header = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <img src="/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png" alt="J.Gas" className="h-12" />
+            <img src="/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png" alt="S-Gás" className="h-12" />
           </div>
 
           {/* Desktop menu */}
