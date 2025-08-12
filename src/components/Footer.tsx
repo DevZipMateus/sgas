@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo e descrição */}
           <div className="md:col-span-2">
-            <img src="/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png" alt="S-Gás" className="h-16 mb-4" />
+            <img src="/lovable-uploads/1a43baab-17c9-4c1c-a5bd-fa987002802f.png" alt="S-Gás" className="h-16 mb-4" />
             <p className="text-gray-300 mb-4 max-w-md">
               Especialistas em soluções completas para gás GLP. Locação de tanques, manutenção de redes e vendas com parceria PrimeGás.
             </p>

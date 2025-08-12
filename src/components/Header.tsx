@@ -35,7 +35,7 @@ const Header = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <img src="/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png" alt="S-Gás" className="h-12" />
+            <img src="/lovable-uploads/1a43baab-17c9-4c1c-a5bd-fa987002802f.png" alt="S-Gás" className="h-12" />
           </div>
 
           {/* Desktop menu */}
