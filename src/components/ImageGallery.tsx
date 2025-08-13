@@ -1,16 +1,7 @@
-import React, { useEffect } from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  CarouselApi,
-} from "@/components/ui/carousel";
+
+import React from 'react';
 
 const ImageGallery = () => {
-  const [api, setApi] = React.useState<CarouselApi>();
-
   const galleryImages = [
     {
       src: "/lovable-uploads/galeria/midia_1.jpg",
@@ -30,18 +21,6 @@ const ImageGallery = () => {
     }
   ];
 
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    const intervalId = setInterval(() => {
-      api.scrollNext();
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, [api]);
-
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -55,33 +34,20 @@ const ImageGallery = () => {
         </div>
 
         {galleryImages.length > 0 ? (
-          <Carousel
-            setApi={setApi}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-6xl mx-auto"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 gap-4">
               {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <div className="relative overflow-hidden rounded-lg border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-48 md:h-52 object-cover hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                </CarouselItem>
+                <div key={index} className="relative overflow-hidden rounded-lg border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-48 md:h-52 object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black" />
-            <CarouselNext className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black" />
-          </Carousel>
+            </div>
+          </div>
         ) : (
           <div className="text-center py-12">
             <p className="text-jgas-gray text-lg">Galeria em breve...</p>
