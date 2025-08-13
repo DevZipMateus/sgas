@@ -1,4 +1,3 @@
-
 import { Menu, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -12,10 +11,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-jgas-black text-white sticky top-0 z-50 shadow-lg">
+    <header className="bg-gray-600 text-white sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-4">
         {/* Top bar */}
-        <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-jgas-black-light">
+        <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-gray-500">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4 text-jgas-yellow" />
@@ -58,7 +57,7 @@ const Header = () => {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-jgas-black text-white">
+            <SheetContent side="right" className="bg-gray-600 text-white">
               <nav className="flex flex-col space-y-4 mt-8">
                 {menuItems.map((item) => (
                   <a key={item.name} href={item.href} className="hover:text-jgas-yellow transition-colors text-lg">
