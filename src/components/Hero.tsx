@@ -12,21 +12,21 @@ const Hero = () => {
             <span className="text-jgas-yellow block">Gás GLP</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Especialistas em locação de tanques, manutenção de redes e vendas de gás GLP com parceria PrimeGás
+            Referência no setor de Gás GLP, oferecendo soluções para clientes residenciais, comerciais e industriais com qualidade, segurança e eficiência
           </p>
           
           <div className="space-y-4 mb-8">
             <div className="flex items-center space-x-3">
               <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Locação de Tanques GLP</span>
+              <span className="text-lg">Comércio de Gás GLP</span>
             </div>
             <div className="flex items-center space-x-3">
               <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Manutenção em Rede de Gás</span>
+              <span className="text-lg">Instalações de Redes de Gás GLP</span>
             </div>
             <div className="flex items-center space-x-3">
               <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Vendas com Parceria PrimeGás</span>
+              <span className="text-lg">Instalações e Vendas de Tanques a Granel</span>
             </div>
           </div>
 

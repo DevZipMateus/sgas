@@ -6,38 +6,38 @@ import { Button } from '@/components/ui/button';
 const Services = () => {
   const services = [
     {
-      icon: Fuel,
-      title: "Locação de Tanques GLP",
-      description: "Fornecemos tanques de GLP para locação com diferentes capacidades, ideais para condomínios, indústrias e comércios.",
+      icon: ShoppingCart,
+      title: "Comércio de Gás GLP",
+      description: "Fornecemos gás de alta qualidade, atendendo às necessidades de clientes com segurança e confiabilidade.",
       features: [
-        "Tanques de 190kg a 5000kg",
-        "Instalação inclusa",
-        "Manutenção preventiva",
-        "Contrato flexível"
+        "Gás de alta qualidade",
+        "Atendimento seguro",
+        "Confiabilidade garantida",
+        "Clientes residenciais e comerciais"
       ],
       color: "from-jgas-yellow to-jgas-yellow-dark"
     },
     {
       icon: Settings,
-      title: "Manutenção em Rede de Gás GLP",
-      description: "Serviços especializados de manutenção preventiva e corretiva em redes de distribuição de gás GLP.",
+      title: "Instalações de Redes de Gás GLP",
+      description: "Projetamos e executamos redes de distribuição de gás GLP de acordo com as normas técnicas, garantindo segurança e eficiência.",
       features: [
-        "Inspeção técnica completa",
-        "Teste de estanqueidade",
-        "Adequação às normas",
-        "Certificado de conformidade"
+        "Projeto personalizado",
+        "Execução conforme normas técnicas",
+        "Segurança garantida",
+        "Eficiência comprovada"
       ],
       color: "from-gray-600 to-jgas-black"
     },
     {
-      icon: ShoppingCart,
-      title: "Vendas de Gás GLP - PrimeGás",
-      description: "Parceria oficial com a PrimeGás para fornecimento de gás GLP com qualidade garantida e preços competitivos.",
+      icon: Fuel,
+      title: "Instalações e Vendas de Tanques a Granel",
+      description: "Instalamos tanques de 100 a 2000 kg (ou mais), oferecendo soluções personalizadas para armazenamento seguro e abastecimento contínuo.",
       features: [
-        "Parceria oficial PrimeGás",
-        "Entrega programada",
-        "Preços competitivos",
-        "Qualidade garantida"
+        "Tanques de 100kg a 2000kg+",
+        "Soluções personalizadas",
+        "Armazenamento seguro",
+        "Abastecimento contínuo"
       ],
       color: "from-blue-600 to-blue-800"
     }
@@ -51,7 +51,7 @@ const Services = () => {
             Nossos Serviços
           </h2>
           <p className="text-xl text-jgas-gray max-w-3xl mx-auto">
-            Oferecemos soluções completas em gás GLP com qualidade, segurança e confiabilidade
+            Soluções completas em Gás GLP para clientes residenciais, comerciais e industriais
           </p>
         </div>
 
@@ -84,9 +84,9 @@ const Services = () => {
         </div>
 
         <div className="bg-jgas-black text-white p-8 rounded-2xl text-center">
-          <h3 className="text-2xl font-bold mb-4">Precisa de um orçamento personalizado?</h3>
+          <h3 className="text-2xl font-bold mb-4">Entre em Contato</h3>
           <p className="text-lg mb-6 text-gray-300">
-            Entre em contato conosco e receba uma proposta sob medida para sua necessidade
+            Descubra como a Sgás Comércio de Equipamentos Ltda pode fornecer soluções completas em Gás GLP para o seu negócio ou residência. Solicite um orçamento e fale com nossos especialistas hoje mesmo!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold">
@@ -94,7 +94,7 @@ const Services = () => {
             </Button>
             <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black">
               <Phone className="h-5 w-5 mr-2" />
-              Ligar Agora
+              Falar com Especialista
             </Button>
           </div>
         </div>

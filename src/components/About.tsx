@@ -15,37 +15,38 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-jgas-black mb-6">
-              Sobre a S-Gás
+              Bem-vindo à Sgás Comércio de Equipamentos de Gás Ltda
             </h2>
             <p className="text-lg text-jgas-gray mb-6 leading-relaxed">
-              A S-Gás é uma empresa especializada em soluções completas para gás GLP, atuando no mercado há mais de 10 anos. 
-              Nossa missão é fornecer serviços de alta qualidade com segurança e confiabilidade.
-            </p>
-            <p className="text-lg text-jgas-gray mb-8 leading-relaxed">
-              Com uma equipe técnica altamente qualificada e parceria oficial com a PrimeGás, garantimos 
-              que nossos clientes recebam o melhor atendimento e produtos de primeira qualidade.
+              A Sgás Comércio de Equipamentos de Gás Ltda é referência no setor de Gás GLP, oferecendo 
+              soluções completas para clientes residenciais, comerciais e industriais. Com anos de experiência, 
+              nossa empresa se destaca pela qualidade, segurança e eficiência em todos os serviços prestados.
             </p>
 
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-jgas-yellow rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-jgas-black mb-1">Qualidade Certificada</h4>
-                  <p className="text-jgas-gray">Todos os nossos serviços seguem rigorosamente as normas técnicas e de segurança.</p>
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-jgas-black mb-6">Por que escolher a Sgás?</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-jgas-yellow rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-jgas-black mb-1">Segurança em Primeiro Lugar</h4>
+                    <p className="text-jgas-gray">Todos os nossos serviços seguem rigorosamente as normas de segurança e regulamentações do setor.</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-jgas-yellow rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-jgas-black mb-1">Parceria PrimeGás</h4>
-                  <p className="text-jgas-gray">Fornecemos produtos de alta qualidade através da nossa parceria oficial.</p>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-jgas-yellow rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-jgas-black mb-1">Experiência Comprovada</h4>
+                    <p className="text-jgas-gray">Nossa equipe altamente qualificada garante instalações precisas e eficientes.</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-jgas-yellow rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-jgas-black mb-1">Atendimento Especializado</h4>
-                  <p className="text-jgas-gray">Nossa equipe está sempre pronta para atender suas necessidades com agilidade.</p>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-jgas-yellow rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-jgas-black mb-1">Atendimento Personalizado</h4>
+                    <p className="text-jgas-gray">Cada projeto é planejado para atender às necessidades específicas de cada cliente.</p>
+                  </div>
                 </div>
               </div>
             </div>
