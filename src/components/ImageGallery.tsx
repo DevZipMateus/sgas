@@ -71,7 +71,7 @@ const ImageGallery = () => {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-64 md:h-72 object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 md:h-52 object-cover hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                   </div>
