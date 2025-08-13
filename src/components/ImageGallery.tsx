@@ -12,24 +12,7 @@ import {
 const ImageGallery = () => {
   const [api, setApi] = React.useState<CarouselApi>();
 
-  const galleryImages = [
-    {
-      src: "/lovable-uploads/galeria/midia_1.jpg",
-      alt: "S-Gás - Equipamentos de Gás GLP"
-    },
-    {
-      src: "/lovable-uploads/galeria/midia_3.jpg", 
-      alt: "S-Gás - Instalações de Tanques"
-    },
-    {
-      src: "/lovable-uploads/galeria/midia_4.jpg",
-      alt: "S-Gás - Redes de Distribuição"
-    },
-    {
-      src: "/lovable-uploads/galeria/midia_5.jpg",
-      alt: "S-Gás - Serviços Especializados"
-    }
-  ];
+  const galleryImages = [];
 
   useEffect(() => {
     if (!api) {
@@ -55,33 +38,39 @@ const ImageGallery = () => {
           </p>
         </div>
 
-        <Carousel
-          setApi={setApi}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {galleryImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <div className="relative overflow-hidden rounded-lg border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-48 md:h-52 object-cover hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
+        {galleryImages.length > 0 ? (
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {galleryImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="relative overflow-hidden rounded-lg border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-48 md:h-52 object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black" />
-          <CarouselNext className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black" />
-        </Carousel>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black" />
+            <CarouselNext className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black" />
+          </Carousel>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-jgas-gray text-lg">Galeria em breve...</p>
+          </div>
+        )}
       </div>
     </section>
   );
