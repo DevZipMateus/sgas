@@ -1,14 +1,15 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
 
 User-agent: *
 Allow: /
+
+# Arquivos importantes para SEO
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Bloquear caminhos administrativos (caso existam no futuro)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+
+# Sitemap
+Sitemap: https://www.sgasgranel.com.br/sitemap.xml

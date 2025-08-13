@@ -49,10 +49,10 @@ const Contact = () => {
 *Mensagem:*
 ${formData.message}
 
-_Mensagem enviada através do site_`;
+_Mensagem enviada através do site www.sgasgranel.com.br_`;
 
-    // Número do WhatsApp (substitua pelo número real da empresa)
-    const whatsappNumber = '5511999999999'; // Formato: código do país + DDD + número
+    // Número do WhatsApp da S-Gás
+    const whatsappNumber = '5514991622380'; // (14) 99162-2380
     
     // Criar URL do WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -98,7 +98,7 @@ _Mensagem enviada através do site_`;
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">(11) 99999-9999</p>
+                <p className="text-lg">(14) 99162-2380</p>
                 <p className="text-sm text-gray-300">WhatsApp disponível</p>
               </CardContent>
             </Card>
@@ -111,7 +111,7 @@ _Mensagem enviada através do site_`;
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">contato@sgas.com.br</p>
+                <p className="text-lg">fernando@squadromr.com.br</p>
                 <p className="text-sm text-gray-300">Respondemos em até 24h</p>
               </CardContent>
             </Card>
@@ -124,8 +124,8 @@ _Mensagem enviada através do site_`;
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">São Paulo - SP</p>
-                <p className="text-sm text-gray-300">Atendemos toda a Grande SP</p>
+                <p className="text-lg">Av. Comandante João Ribeiro de Barros</p>
+                <p className="text-sm text-gray-300">KM 444,5 - Parque das Industrias</p>
               </CardContent>
             </Card>
 
@@ -137,8 +137,8 @@ _Mensagem enviada através do site_`;
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">24 horas por dia</p>
-                <p className="text-sm text-gray-300">Emergências e suporte</p>
+                <p className="text-lg">Seg - Sex: 8h às 18h</p>
+                <p className="text-sm text-gray-300">Sáb: 8h às 12h</p>
               </CardContent>
             </Card>
           </div>
@@ -171,7 +171,7 @@ _Mensagem enviada através do site_`;
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="bg-jgas-black border-gray-600 text-white" 
-                        placeholder="(11) 99999-9999" 
+                        placeholder="(14) 99999-9999" 
                         required
                       />
                     </div>
@@ -199,10 +199,11 @@ _Mensagem enviada através do site_`;
                       className="w-full p-3 bg-jgas-black border border-gray-600 rounded-md text-white"
                     >
                       <option value="">Selecione um serviço</option>
-                      <option value="Locação de Tanques GLP">Locação de Tanques GLP</option>
-                      <option value="Manutenção em Rede de Gás">Manutenção em Rede de Gás</option>
-                      <option value="Vendas de Gás GLP">Vendas de Gás GLP</option>
-                      <option value="Todos os serviços">Todos os serviços</option>
+                      <option value="Vendas e Locações de Tanques GLP">Vendas e Locações de Tanques GLP</option>
+                      <option value="Manutenção em Redes de Gás GLP">Manutenção em Redes de Gás GLP</option>
+                      <option value="Desenvolvimento de Projetos de Redes de Gás">Desenvolvimento de Projetos de Redes de Gás</option>
+                      <option value="Vendas de Gás com Abastecimento a Granel">Vendas de Gás com Abastecimento a Granel</option>
+                      <option value="Suporte Técnico">Suporte Técnico</option>
                     </select>
                   </div>
 

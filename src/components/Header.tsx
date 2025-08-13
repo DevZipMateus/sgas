@@ -6,8 +6,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 const Header = () => {
   const menuItems = [
     { name: 'Início', href: '#inicio' },
-    { name: 'Serviços', href: '#servicos' },
     { name: 'Sobre', href: '#sobre' },
+    { name: 'Serviços', href: '#servicos' },
+    { name: 'Localização', href: '#localizacao' },
     { name: 'Contato', href: '#contato' }
   ];
 
@@ -19,23 +20,23 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4 text-jgas-yellow" />
-              <span>(11) 99999-9999</span>
+              <span>(14) 99162-2380</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4 text-jgas-yellow" />
-              <span>contato@sgas.com.br</span>
+              <span>fernando@squadromr.com.br</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <MapPin className="h-4 w-4 text-jgas-yellow" />
-            <span>São Paulo - SP</span>
+            <span>Av. Comandante João Ribeiro de Barros, KM 444,5</span>
           </div>
         </div>
 
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <img src="/lovable-uploads/1a43baab-17c9-4c1c-a5bd-fa987002802f.png" alt="S-Gás" className="h-12" />
+            <img src="/lovable-uploads/1a43baab-17c9-4c1c-a5bd-fa987002802f.png" alt="S-Gás - Soluções em GLP" className="h-12" />
           </div>
 
           {/* Desktop menu */}

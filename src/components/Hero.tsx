@@ -8,25 +8,32 @@ const Hero = () => {
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
         <div className="text-white animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Soluções Completas em 
-            <span className="text-jgas-yellow block">Gás GLP</span>
+            S-Gás Comércio de
+            <span className="text-jgas-yellow block">Equipamentos de Gás</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Referência no setor de Gás GLP, oferecendo soluções para clientes residenciais, comerciais e industriais com qualidade, segurança e eficiência
+          <p className="text-xl md:text-2xl mb-4 text-jgas-yellow font-semibold">
+            É mais do que Gás, é GLP com Segurança e Profissionalismo, do botijão a tubulação.
+          </p>
+          <p className="text-lg mb-8 text-gray-300">
+            Referência no setor de Gás GLP, oferecendo soluções completas para clientes residenciais, comerciais e industriais com qualidade, segurança e eficiência.
           </p>
           
           <div className="space-y-4 mb-8">
             <div className="flex items-center space-x-3">
               <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Comércio de Gás GLP</span>
+              <span className="text-lg">Vendas e Locações de Tanques GLP</span>
             </div>
             <div className="flex items-center space-x-3">
               <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Instalações de Redes de Gás GLP</span>
+              <span className="text-lg">Manutenção em Redes de Gás GLP</span>
             </div>
             <div className="flex items-center space-x-3">
               <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Instalações e Vendas de Tanques a Granel</span>
+              <span className="text-lg">Desenvolvimento de Projetos de Redes de Gás</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
+              <span className="text-lg">Vendas de Gás com Abastecimento a Granel</span>
             </div>
           </div>
 
@@ -36,7 +43,7 @@ const Hero = () => {
             </Button>
             <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black font-semibold text-lg px-8">
               <Phone className="h-5 w-5 mr-2" />
-              (11) 99999-9999
+              (14) 99162-2380
             </Button>
           </div>
         </div>
