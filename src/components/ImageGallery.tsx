@@ -22,28 +22,30 @@ const ImageGallery = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-8 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-jgas-black mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-jgas-black mb-4">
             Nossa Galeria
           </h2>
-          <p className="text-lg text-jgas-gray max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-jgas-gray max-w-2xl mx-auto px-4">
             Conheça nossos equipamentos, instalações e a qualidade dos serviços da S-Gás
           </p>
         </div>
 
         {galleryImages.length > 0 ? (
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               {galleryImages.map((image, index) => (
                 <div key={index} className="relative overflow-hidden rounded-lg border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-48 md:h-52 object-cover hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+                  <div className="aspect-[4/3] w-full">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
