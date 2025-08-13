@@ -56,34 +56,34 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-jgas-black mb-6">
+    <section id="servicos" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-jgas-black mb-4 lg:mb-6">
             Nossos Serviços
           </h2>
-          <p className="text-xl text-jgas-gray max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-jgas-gray max-w-3xl mx-auto px-4">
             Soluções completas em Gás GLP para clientes residenciais, comerciais e industriais
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden h-full">
               <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
-              <CardHeader className="text-center pb-4">
-                <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                  <service.icon className="h-8 w-8 text-white" />
+              <CardHeader className="text-center pb-4 p-4 sm:p-6">
+                <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+                  <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <CardTitle className="text-lg font-bold text-jgas-black mb-2">{service.title}</CardTitle>
+                <CardTitle className="text-base sm:text-lg font-bold text-jgas-black mb-2">{service.title}</CardTitle>
                 <CardDescription className="text-jgas-gray text-sm">{service.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col justify-between h-full">
+              <CardContent className="flex flex-col justify-between h-full p-4 sm:p-6 pt-0">
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-jgas-yellow flex-shrink-0" />
-                      <span className="text-xs text-jgas-gray">{feature}</span>
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-jgas-yellow flex-shrink-0" />
+                      <span className="text-xs sm:text-sm text-jgas-gray">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -95,9 +95,9 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="bg-jgas-black text-white p-8 rounded-2xl text-center">
-          <h3 className="text-2xl font-bold mb-4">Suporte Técnico Especializado</h3>
-          <p className="text-lg mb-6 text-gray-300">
+        <div className="bg-jgas-black text-white p-6 sm:p-8 rounded-2xl text-center">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4">Suporte Técnico Especializado</h3>
+          <p className="text-base sm:text-lg mb-6 text-gray-300">
             Nossa equipe oferece suporte técnico completo para garantir o funcionamento perfeito de suas instalações de gás GLP. Entre em contato conosco!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -105,7 +105,7 @@ const Services = () => {
               Solicitar Orçamento
             </Button>
             <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black">
-              <Phone className="h-5 w-5 mr-2" />
+              <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
               Falar com Especialista
             </Button>
           </div>

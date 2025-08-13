@@ -5,50 +5,50 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <section id="inicio" className="bg-gradient-to-br from-jgas-black via-jgas-black-light to-jgas-black min-h-screen flex items-center">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-        <div className="text-white animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-8 lg:py-0">
+        <div className="text-white animate-fade-in order-2 lg:order-1">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
             S-Gás Comércio de
             <span className="text-jgas-yellow block">Equipamentos de Gás</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-4 text-jgas-yellow font-semibold">
+          <p className="text-lg sm:text-xl md:text-2xl mb-3 lg:mb-4 text-jgas-yellow font-semibold">
             É mais do que Gás, é GLP com Segurança e Profissionalismo, do botijão a tubulação.
           </p>
-          <p className="text-lg mb-8 text-gray-300">
+          <p className="text-base sm:text-lg mb-6 lg:mb-8 text-gray-300">
             Referência no setor de Gás GLP, oferecendo soluções completas para clientes residenciais, comerciais e industriais com qualidade, segurança e eficiência.
           </p>
           
-          <div className="space-y-4 mb-8">
+          <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
             <div className="flex items-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Vendas e Locações de Tanques GLP</span>
+              <CheckCircle className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow flex-shrink-0" />
+              <span className="text-sm sm:text-base lg:text-lg">Vendas e Locações de Tanques GLP</span>
             </div>
             <div className="flex items-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Manutenção em Redes de Gás GLP</span>
+              <CheckCircle className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow flex-shrink-0" />
+              <span className="text-sm sm:text-base lg:text-lg">Manutenção em Redes de Gás GLP</span>
             </div>
             <div className="flex items-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Desenvolvimento de Projetos de Redes de Gás</span>
+              <CheckCircle className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow flex-shrink-0" />
+              <span className="text-sm sm:text-base lg:text-lg">Desenvolvimento de Projetos de Redes de Gás</span>
             </div>
             <div className="flex items-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-jgas-yellow flex-shrink-0" />
-              <span className="text-lg">Vendas de Gás com Abastecimento a Granel</span>
+              <CheckCircle className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow flex-shrink-0" />
+              <span className="text-sm sm:text-base lg:text-lg">Vendas de Gás com Abastecimento a Granel</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-lg px-8">
+          <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
+            <Button size="lg" className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-base lg:text-lg px-6 lg:px-8 py-3">
               Solicitar Orçamento
             </Button>
-            <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black font-semibold text-lg px-8">
-              <Phone className="h-5 w-5 mr-2" />
+            <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black font-semibold text-base lg:text-lg px-6 lg:px-8 py-3">
+              <Phone className="h-4 w-4 lg:h-5 lg:w-5 mr-2" />
               (14) 99162-2380
             </Button>
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative order-1 lg:order-2">
           <div className="rounded-2xl overflow-hidden border border-jgas-yellow/30">
             <video 
               className="w-full h-auto"
