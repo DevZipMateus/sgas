@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import {
   Carousel,
@@ -12,7 +11,24 @@ import {
 const ImageGallery = () => {
   const [api, setApi] = React.useState<CarouselApi>();
 
-  const galleryImages = [];
+  const galleryImages = [
+    {
+      src: "/lovable-uploads/galeria/midia_1.jpg",
+      alt: "S-Gás - Equipamentos e Serviços"
+    },
+    {
+      src: "/lovable-uploads/galeria/midia_3.jpg", 
+      alt: "S-Gás - Instalações Profissionais"
+    },
+    {
+      src: "/lovable-uploads/galeria/midia_4.jpg",
+      alt: "S-Gás - Infraestrutura e Equipamentos"
+    },
+    {
+      src: "/lovable-uploads/galeria/midia_5.jpg",
+      alt: "S-Gás - Serviços Especializados"
+    }
+  ];
 
   useEffect(() => {
     if (!api) {
