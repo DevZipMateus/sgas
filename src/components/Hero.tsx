@@ -42,28 +42,17 @@ const Hero = () => {
         </div>
 
         <div className="relative">
-          <div className="bg-gradient-to-br from-jgas-yellow/20 to-transparent p-8 rounded-2xl backdrop-blur-sm border border-jgas-yellow/30">
-            <div className="bg-white/10 p-6 rounded-xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Por que escolher a S-Gás?</h3>
-              <ul className="space-y-3 text-white">
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-jgas-yellow rounded-full"></div>
-                  <span>Mais de 10 anos de experiência</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-jgas-yellow rounded-full"></div>
-                  <span>Equipe técnica especializada</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-jgas-yellow rounded-full"></div>
-                  <span>Atendimento 24/7</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-jgas-yellow rounded-full"></div>
-                  <span>Parceria oficial PrimeGás</span>
-                </li>
-              </ul>
-            </div>
+          <div className="rounded-2xl overflow-hidden border border-jgas-yellow/30">
+            <video 
+              className="w-full h-auto"
+              autoPlay 
+              muted 
+              loop
+              playsInline
+            >
+              <source src="/lovable-uploads/galeria/sgas.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos HTML5.
+            </video>
           </div>
         </div>
       </div>
