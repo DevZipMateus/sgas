@@ -13,9 +13,38 @@ const Contact = () => {
     name: '',
     phone: '',
     email: '',
+    region: '',
     service: '',
     message: ''
   });
+
+  // Mapeamento das regiões com seus respectivos vendedores e números
+  const regionSellers = {
+    'bauru': {
+      name: 'Marcelo',
+      phone: '5514996598323',
+      displayPhone: '(14) 99659-8323',
+      region: 'Bauru e Região'
+    },
+    'avare': {
+      name: 'Marcelo',
+      phone: '5514996598323',
+      displayPhone: '(14) 99659-8323',
+      region: 'Avaré e Região'
+    },
+    'marilia': {
+      name: 'Lucas',
+      phone: '5514998480109',
+      displayPhone: '(14) 99848-0109',
+      region: 'Marília e Região'
+    },
+    'presidente-prudente': {
+      name: 'Alessandro',
+      phone: '5518997931003',
+      displayPhone: '(18) 99793-1003',
+      region: 'Presidente Prudente'
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -29,10 +58,22 @@ const Contact = () => {
     e.preventDefault();
     
     // Validação básica
-    if (!formData.name || !formData.phone || !formData.email || !formData.message) {
+    if (!formData.name || !formData.phone || !formData.email || !formData.region || !formData.message) {
       toast({
         title: "Erro",
         description: "Por favor, preencha todos os campos obrigatórios.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Obter informações do vendedor baseado na região selecionada
+    const sellerInfo = regionSellers[formData.region as keyof typeof regionSellers];
+    
+    if (!sellerInfo) {
+      toast({
+        title: "Erro",
+        description: "Por favor, selecione uma região válida.",
         variant: "destructive",
       });
       return;
@@ -44,6 +85,7 @@ const Contact = () => {
 *Nome:* ${formData.name}
 *Telefone:* ${formData.phone}
 *E-mail:* ${formData.email}
+*Região:* ${sellerInfo.region}
 *Serviço:* ${formData.service || 'Não especificado'}
 
 *Mensagem:*
@@ -51,11 +93,8 @@ ${formData.message}
 
 _Mensagem enviada através do site www.sgasgranel.com.br_`;
 
-    // Número do WhatsApp da S-Gás
-    const whatsappNumber = '5514991622380'; // (14) 99162-2380
-    
-    // Criar URL do WhatsApp
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    // Criar URL do WhatsApp para o vendedor da região selecionada
+    const whatsappUrl = `https://wa.me/${sellerInfo.phone}?text=${encodeURIComponent(whatsappMessage)}`;
     
     // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
@@ -65,79 +104,80 @@ _Mensagem enviada através do site www.sgasgranel.com.br_`;
       name: '',
       phone: '',
       email: '',
+      region: '',
       service: '',
       message: ''
     });
 
     toast({
       title: "Sucesso!",
-      description: "Redirecionando para o WhatsApp...",
+      description: `Redirecionando para o WhatsApp do ${sellerInfo.name}...`,
     });
   };
 
   return (
-    <section id="contato" className="py-20 bg-jgas-black text-white">
+    <section id="contato" className="py-12 sm:py-16 md:py-20 bg-jgas-black text-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             Entre em Contato
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
             Estamos prontos para atender você com as melhores soluções em gás GLP
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Informações de contato */}
-          <div className="space-y-6">
+          <div className="space-y-4 lg:space-y-6">
             <Card className="bg-jgas-black-light border-jgas-yellow/30 text-white">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-3">
-                  <Phone className="h-6 w-6 text-jgas-yellow" />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center space-x-3 text-lg">
+                  <Phone className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow" />
                   <span>Telefone</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-lg">(14) 99162-2380</p>
+              <CardContent className="pt-0">
+                <p className="text-base lg:text-lg">(14) 99162-2380</p>
                 <p className="text-sm text-gray-300">WhatsApp disponível</p>
               </CardContent>
             </Card>
 
             <Card className="bg-jgas-black-light border-jgas-yellow/30 text-white">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-3">
-                  <Mail className="h-6 w-6 text-jgas-yellow" />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center space-x-3 text-lg">
+                  <Mail className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow" />
                   <span>E-mail</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-lg">fernando@squadromr.com.br</p>
+              <CardContent className="pt-0">
+                <p className="text-base lg:text-lg">fernando@squadromr.com.br</p>
                 <p className="text-sm text-gray-300">Respondemos em até 24h</p>
               </CardContent>
             </Card>
 
             <Card className="bg-jgas-black-light border-jgas-yellow/30 text-white">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-3">
-                  <MapPin className="h-6 w-6 text-jgas-yellow" />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center space-x-3 text-lg">
+                  <MapPin className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow" />
                   <span>Localização</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-lg">Av. Comandante João Ribeiro de Barros</p>
+              <CardContent className="pt-0">
+                <p className="text-base lg:text-lg">Av. Comandante João Ribeiro de Barros</p>
                 <p className="text-sm text-gray-300">KM 444,5 - Parque das Industrias</p>
               </CardContent>
             </Card>
 
             <Card className="bg-jgas-black-light border-jgas-yellow/30 text-white">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-3">
-                  <Clock className="h-6 w-6 text-jgas-yellow" />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center space-x-3 text-lg">
+                  <Clock className="h-5 w-5 lg:h-6 lg:w-6 text-jgas-yellow" />
                   <span>Horário</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-lg">Seg - Sex: 8h às 18h</p>
+              <CardContent className="pt-0">
+                <p className="text-base lg:text-lg">Seg - Sex: 8h às 18h</p>
                 <p className="text-sm text-gray-300">Sáb: 8h às 12h</p>
               </CardContent>
             </Card>
@@ -146,12 +186,12 @@ _Mensagem enviada através do site www.sgasgranel.com.br_`;
           {/* Formulário de contato */}
           <div className="lg:col-span-2">
             <Card className="bg-jgas-black-light border-jgas-yellow/30">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Solicite seu Orçamento</CardTitle>
-                <p className="text-gray-300">Preencha o formulário e entraremos em contato via WhatsApp</p>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl lg:text-2xl text-white">Solicite seu Orçamento</CardTitle>
+                <p className="text-gray-300 text-sm lg:text-base">Preencha o formulário e entraremos em contato via WhatsApp</p>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <CardContent className="space-y-4 lg:space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Nome *</label>
@@ -191,6 +231,23 @@ _Mensagem enviada através do site www.sgasgranel.com.br_`;
                   </div>
 
                   <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Região *</label>
+                    <select 
+                      name="region"
+                      value={formData.region}
+                      onChange={handleInputChange}
+                      className="w-full p-3 bg-jgas-black border border-gray-600 rounded-md text-white"
+                      required
+                    >
+                      <option value="">Selecione sua região</option>
+                      <option value="bauru">Bauru e Região - Marcelo (14) 99659-8323</option>
+                      <option value="avare">Avaré e Região - Marcelo (14) 99659-8323</option>
+                      <option value="marilia">Marília e Região - Lucas (14) 99848-0109</option>
+                      <option value="presidente-prudente">Presidente Prudente - Alessandro (18) 99793-1003</option>
+                    </select>
+                  </div>
+
+                  <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Serviço de Interesse</label>
                     <select 
                       name="service"
@@ -221,7 +278,7 @@ _Mensagem enviada através do site www.sgasgranel.com.br_`;
 
                   <Button 
                     type="submit"
-                    className="w-full bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-lg py-6"
+                    className="w-full bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-base lg:text-lg py-4 lg:py-6"
                   >
                     <Send className="h-5 w-5 mr-2" />
                     Enviar via WhatsApp
@@ -229,7 +286,7 @@ _Mensagem enviada através do site www.sgasgranel.com.br_`;
                 </form>
 
                 <p className="text-sm text-gray-400 text-center">
-                  * Campos obrigatórios. Você será redirecionado para o WhatsApp para enviar a mensagem.
+                  * Campos obrigatórios. Você será redirecionado para o WhatsApp do vendedor da sua região.
                 </p>
               </CardContent>
             </Card>
