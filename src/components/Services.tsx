@@ -12,7 +12,7 @@ const Services = () => {
       description: "Oferecemos tanques de diversos tamanhos para locação ou venda, garantindo o abastecimento contínuo e seguro para seu estabelecimento.",
       features: [
         "Tanques de 100kg a 2000kg+",
-        "Locação com manutenção inclusa",
+        "Locações de Tanques",
         "Vendas com suporte técnico",
         "Instalação profissional"
       ],
