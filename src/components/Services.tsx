@@ -1,4 +1,3 @@
-
 import { Fuel, Settings, ShoppingCart, Wrench, Phone, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -45,12 +44,11 @@ const Services = () => {
     {
       icon: Fuel,
       title: "Vendas de Gás com Abastecimento a Granel",
-      description: "Fornecimento de gás GLP a granel com abastecimento direto nos tanques do cliente, garantindo continuidade operacional.",
+      description: "Fornecimento de gás GLP a granel com abastecimento direto nos tanques, garantindo continuidade operacional.",
       features: [
         "Abastecimento programado",
         "Gás de alta qualidade",
-        "Entrega pontual",
-        "Controle de estoque"
+        "Entrega pontual"
       ],
       color: "from-green-600 to-green-800"
     }
