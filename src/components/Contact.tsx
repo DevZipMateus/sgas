@@ -185,8 +185,8 @@ _Mensagem enviada através do site www.sgasgranel.com.br_`;
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-0">
-                <p className="text-base lg:text-lg">Seg - Sex: 8h às 18h</p>
-                <p className="text-sm text-gray-300">Sáb: 8h às 12h</p>
+                <p className="text-base lg:text-lg">Seg - Sex: 8h às 17h30</p>
+                <p className="text-sm text-gray-300">Fechado final de semana</p>
               </CardContent>
             </Card>
           </div>
