@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
 
@@ -46,8 +47,15 @@ const Contact = () => {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSelectChange = (name: string) => (value: string) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -232,36 +240,33 @@ _Mensagem enviada através do site www.sgasgranel.com.br_`;
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Região *</label>
-                    <select 
-                      name="region"
-                      value={formData.region}
-                      onChange={handleInputChange}
-                      className="w-full p-3 bg-jgas-black border border-gray-600 rounded-md text-white"
-                      required
-                    >
-                      <option value="">Selecione sua região</option>
-                      <option value="bauru">Bauru e Região - Marcelo (14) 99659-8323</option>
-                      <option value="avare">Avaré e Região - Marcelo (14) 99659-8323</option>
-                      <option value="marilia">Marília e Região - Lucas (14) 99848-0109</option>
-                      <option value="presidente-prudente">Presidente Prudente - Alessandro (18) 99793-1003</option>
-                    </select>
+                    <Select value={formData.region} onValueChange={handleSelectChange('region')}>
+                      <SelectTrigger className="bg-jgas-black border-gray-600 text-white">
+                        <SelectValue placeholder="Selecione sua região" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-jgas-black-light border-gray-600 text-white z-50">
+                        <SelectItem value="bauru">Bauru e Região - Marcelo (14) 99659-8323</SelectItem>
+                        <SelectItem value="avare">Avaré e Região - Marcelo (14) 99659-8323</SelectItem>
+                        <SelectItem value="marilia">Marília e Região - Lucas (14) 99848-0109</SelectItem>
+                        <SelectItem value="presidente-prudente">Presidente Prudente - Alessandro (18) 99793-1003</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Serviço de Interesse</label>
-                    <select 
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full p-3 bg-jgas-black border border-gray-600 rounded-md text-white"
-                    >
-                      <option value="">Selecione um serviço</option>
-                      <option value="Vendas e Locações de Tanques GLP">Vendas e Locações de Tanques GLP</option>
-                      <option value="Manutenção em Redes de Gás GLP">Manutenção em Redes de Gás GLP</option>
-                      <option value="Desenvolvimento de Projetos de Redes de Gás">Desenvolvimento de Projetos de Redes de Gás</option>
-                      <option value="Vendas de Gás com Abastecimento a Granel">Vendas de Gás com Abastecimento a Granel</option>
-                      <option value="Suporte Técnico">Suporte Técnico</option>
-                    </select>
+                    <Select value={formData.service} onValueChange={handleSelectChange('service')}>
+                      <SelectTrigger className="bg-jgas-black border-gray-600 text-white">
+                        <SelectValue placeholder="Selecione um serviço" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-jgas-black-light border-gray-600 text-white z-50">
+                        <SelectItem value="Vendas e Locações de Tanques GLP">Vendas e Locações de Tanques GLP</SelectItem>
+                        <SelectItem value="Manutenção em Redes de Gás GLP">Manutenção em Redes de Gás GLP</SelectItem>
+                        <SelectItem value="Desenvolvimento de Projetos de Redes de Gás">Desenvolvimento de Projetos de Redes de Gás</SelectItem>
+                        <SelectItem value="Vendas de Gás com Abastecimento a Granel">Vendas de Gás com Abastecimento a Granel</SelectItem>
+                        <SelectItem value="Suporte Técnico">Suporte Técnico</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <div>
