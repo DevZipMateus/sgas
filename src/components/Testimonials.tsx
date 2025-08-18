@@ -1,4 +1,3 @@
-
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -7,20 +6,18 @@ const Testimonials = () => {
     {
       id: 1,
       name: "Maria Silva",
-      company: "Restaurante Bella Vista",
+      company: "Restaurante Bella Vista", 
       location: "Bauru - SP",
       rating: 5,
-      text: "Excelente atendimento! A S-Gás sempre nos atende com rapidez e profissionalismo. Nosso restaurante nunca fica sem gás graças ao serviço de qualidade deles.",
-      image: "/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png"
+      text: "Excelente atendimento! A S-Gás sempre nos atende com rapidez e profissionalismo. Nosso restaurante nunca fica sem gás graças ao serviço de qualidade deles."
     },
     {
       id: 2,
       name: "João Santos",
       company: "Padaria do João",
-      location: "Marília - SP",
+      location: "Marília - SP", 
       rating: 5,
-      text: "Trabalho com a S-Gás há mais de 3 anos e posso afirmar que é uma empresa séria e confiável. Preços justos e entrega sempre no prazo.",
-      image: "/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png"
+      text: "Trabalho com a S-Gás há mais de 3 anos e posso afirmar que é uma empresa séria e confiável. Preços justos e entrega sempre no prazo."
     },
     {
       id: 3,
@@ -28,8 +25,7 @@ const Testimonials = () => {
       company: "Hotel Fazenda",
       location: "Avaré - SP",
       rating: 5,
-      text: "A qualidade do gás é excelente e o atendimento é personalizado. Recomendo a S-Gás para qualquer empresa que precisa de confiabilidade no fornecimento de GLP.",
-      image: "/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png"
+      text: "A qualidade do gás é excelente e o atendimento é personalizado. Recomendo a S-Gás para qualquer empresa que precisa de confiabilidade no fornecimento de GLP."
     },
     {
       id: 4,
@@ -37,8 +33,7 @@ const Testimonials = () => {
       company: "Indústria Alimentícia",
       location: "Presidente Prudente - SP",
       rating: 5,
-      text: "Parceria de longa data! A S-Gás sempre supera nossas expectativas com soluções personalizadas para nossa indústria. Equipe muito competente.",
-      image: "/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png"
+      text: "Parceria de longa data! A S-Gás sempre supera nossas expectativas com soluções personalizadas para nossa indústria. Equipe muito competente."
     },
     {
       id: 5,
@@ -46,8 +41,7 @@ const Testimonials = () => {
       company: "Lanchonete Central",
       location: "Bauru - SP",
       rating: 5,
-      text: "Atendimento rápido e eficiente. Quando preciso de gás urgente, sei que posso contar com a S-Gás. Preço justo e qualidade garantida!",
-      image: "/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png"
+      text: "Atendimento rápido e eficiente. Quando preciso de gás urgente, sei que posso contar com a S-Gás. Preço justo e qualidade garantida!"
     },
     {
       id: 6,
@@ -55,8 +49,7 @@ const Testimonials = () => {
       company: "Churrascaria Tradição",
       location: "Marília - SP",
       rating: 5,
-      text: "Nossa churrascaria funciona 100% com gás da S-Gás. Nunca tivemos problemas e o suporte técnico é excepcional. Empresa de confiança!",
-      image: "/lovable-uploads/80db88f6-baf9-43eb-a7bd-47384cb29ba3.png"
+      text: "Nossa churrascaria funciona 100% com gás da S-Gás. Nunca tivemos problemas e o suporte técnico é excepcional. Empresa de confiança!"
     }
   ];
 
@@ -98,23 +91,16 @@ const Testimonials = () => {
                   "{testimonial.text}"
                 </p>
                 
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full bg-gray-200 mr-4"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-jgas-black text-sm sm:text-base">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-jgas-yellow text-xs sm:text-sm font-medium">
-                      {testimonial.company}
-                    </p>
-                    <p className="text-jgas-gray text-xs">
-                      {testimonial.location}
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-jgas-black text-sm sm:text-base">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-jgas-yellow text-xs sm:text-sm font-medium">
+                    {testimonial.company}
+                  </p>
+                  <p className="text-jgas-gray text-xs">
+                    {testimonial.location}
+                  </p>
                 </div>
               </CardContent>
             </Card>
