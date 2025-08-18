@@ -54,6 +54,13 @@ const Services = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="servicos" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +93,10 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-sm">
+                <Button 
+                  onClick={scrollToContact}
+                  className="w-full bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-sm"
+                >
                   Saiba Mais
                 </Button>
               </CardContent>
