@@ -2,6 +2,7 @@
 import { Menu, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import RegionSelectionModal from './RegionSelectionModal';
 
 const Header = () => {
   const menuItems = [
@@ -48,9 +49,11 @@ const Header = () => {
             ))}
           </nav>
 
-          <Button className="hidden md:flex bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold">
-            Solicitar Orçamento
-          </Button>
+          <RegionSelectionModal>
+            <Button className="hidden md:flex bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold">
+              Solicitar Orçamento
+            </Button>
+          </RegionSelectionModal>
 
           {/* Mobile menu */}
           <Sheet>
@@ -66,9 +69,11 @@ const Header = () => {
                     {item.name}
                   </a>
                 ))}
-                <Button className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold mt-4">
-                  Solicitar Orçamento
-                </Button>
+                <RegionSelectionModal>
+                  <Button className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold mt-4">
+                    Solicitar Orçamento
+                  </Button>
+                </RegionSelectionModal>
               </nav>
             </SheetContent>
           </Sheet>

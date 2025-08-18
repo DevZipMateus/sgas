@@ -2,6 +2,7 @@
 import { Fuel, Settings, ShoppingCart, Wrench, Phone, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import RegionSelectionModal from './RegionSelectionModal';
 
 const Services = () => {
   const services = [
@@ -101,9 +102,11 @@ const Services = () => {
             Nossa equipe oferece suporte técnico completo para garantir o funcionamento perfeito de suas instalações de gás GLP. Entre em contato conosco!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold">
-              Solicitar Orçamento
-            </Button>
+            <RegionSelectionModal>
+              <Button size="lg" className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold">
+                Solicitar Orçamento
+              </Button>
+            </RegionSelectionModal>
             <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black">
               <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
               Falar com Especialista

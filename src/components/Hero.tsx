@@ -1,6 +1,7 @@
 
 import { CheckCircle, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import RegionSelectionModal from './RegionSelectionModal';
 
 const Hero = () => {
   return (
@@ -38,9 +39,11 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
-            <Button size="lg" className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-base lg:text-lg px-6 lg:px-8 py-3">
-              Solicitar Orçamento
-            </Button>
+            <RegionSelectionModal>
+              <Button size="lg" className="bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-base lg:text-lg px-6 lg:px-8 py-3">
+                Solicitar Orçamento
+              </Button>
+            </RegionSelectionModal>
             <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black font-semibold text-base lg:text-lg px-6 lg:px-8 py-3">
               <Phone className="h-4 w-4 lg:h-5 lg:w-5 mr-2" />
               (14) 99162-2380
