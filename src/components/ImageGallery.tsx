@@ -164,7 +164,7 @@ const ImageGallery = () => {
         )}
         
         {/* Seção do Vídeo */}
-        <div className="max-w-4xl mx-auto mt-12">
+        <div className="max-w-2xl mx-auto mt-12">
           <div className="text-center mb-6">
             <h3 className="text-xl md:text-2xl font-semibold text-jgas-black mb-2">
               Processo de Abastecimento
