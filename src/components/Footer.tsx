@@ -9,9 +9,7 @@ const Footer = () => {
           {/* Logo e descrição */}
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="relative w-fit mb-4">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white rounded-full p-3 border-4 border-jgas-yellow flex items-center justify-center">
-                <img src="/lovable-uploads/1a43baab-17c9-4c1c-a5bd-fa987002802f.png" alt="S-Gás" className="h-16 sm:h-20 w-auto" />
-              </div>
+              <img src="/lovable-uploads/d87b452d-b2b6-4260-8a6a-1d3a74796d4a.png" alt="S-Gás" className="h-16 sm:h-20 w-auto" />
             </div>
             <p className="text-gray-300 mb-4 max-w-md text-sm sm:text-base">
               É mais do que Gás, é GLP com Segurança e Profissionalismo, do botijão a tubulação. Referência no setor de Gás GLP.
