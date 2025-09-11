@@ -173,7 +173,7 @@ const ImageGallery = () => {
           <div className="rounded-lg overflow-hidden shadow-lg bg-white">
             <video
               src="/lovable-uploads/galeria/ABASTECIMENTO.mp4"
-              className="w-full h-auto"
+              className="w-full h-auto max-h-[50vh] object-cover"
               autoPlay
               loop
               muted
