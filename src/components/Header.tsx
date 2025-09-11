@@ -17,53 +17,53 @@ const Header = () => {
     <header className="bg-white text-gray-800 sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-4">
         {/* Top bar */}
-        <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-gray-200">
-          <div className="flex items-center space-x-6">
+        <div className="hidden lg:flex justify-between items-center py-2 text-sm border-b border-gray-200">
+          <div className="flex items-center space-x-4 xl:space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4 text-jgas-yellow" />
-              <span>(14) 99162-2380</span>
+              <span className="text-xs xl:text-sm">(14) 99162-2380</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4 text-jgas-yellow" />
-              <span>fernando@squadromr.com.br</span>
+              <span className="text-xs xl:text-sm">fernando@squadromr.com.br</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <MapPin className="h-4 w-4 text-jgas-yellow" />
-            <span>Av. Comandante João Ribeiro de Barros, KM 444,5</span>
+            <span className="text-xs xl:text-sm">Av. Comandante João Ribeiro de Barros, KM 444,5</span>
           </div>
         </div>
 
         {/* Main navigation */}
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 sm:py-4">
           <div className="flex items-center">
-            <img src="/lovable-uploads/1a43baab-17c9-4c1c-a5bd-fa987002802f.png" alt="S-Gás - Soluções em GLP" className="h-12" />
+            <img src="/lovable-uploads/1a43baab-17c9-4c1c-a5bd-fa987002802f.png" alt="S-Gás - Soluções em GLP" className="h-10 sm:h-12" />
           </div>
 
           {/* Desktop menu */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-6 xl:space-x-8">
             {menuItems.map((item) => (
-              <a key={item.name} href={item.href} className="hover:text-jgas-yellow transition-colors font-medium text-gray-800">
+              <a key={item.name} href={item.href} className="hover:text-jgas-yellow transition-colors font-medium text-gray-800 text-sm xl:text-base">
                 {item.name}
               </a>
             ))}
           </nav>
 
           <RegionSelectionModal>
-            <Button className="hidden md:flex bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold">
+            <Button className="hidden lg:flex bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-sm xl:text-base px-4 xl:px-6">
               Solicitar Orçamento
             </Button>
           </RegionSelectionModal>
 
           {/* Mobile menu */}
           <Sheet>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" className="text-gray-800 hover:text-jgas-yellow">
-                <Menu className="h-6 w-6" />
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-white text-gray-800">
-              <nav className="flex flex-col space-y-4 mt-8">
+            <SheetContent side="right" className="bg-white text-gray-800 w-80">
+              <nav className="flex flex-col space-y-6 mt-8">
                 {menuItems.map((item) => (
                   <a key={item.name} href={item.href} className="hover:text-jgas-yellow transition-colors text-lg">
                     {item.name}

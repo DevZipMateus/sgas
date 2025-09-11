@@ -93,13 +93,13 @@ const ImageGallery = () => {
   ];
 
   return (
-    <section className="py-8 md:py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-8 md:py-12 lg:py-16 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-jgas-black mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-jgas-black mb-4">
             Nossa Galeria
           </h2>
-          <p className="text-base md:text-lg text-jgas-gray max-w-2xl mx-auto px-4">
+          <p className="text-base md:text-lg xl:text-xl text-jgas-gray max-w-2xl mx-auto px-4">
             Conheça nossos equipamentos, instalações e a qualidade dos serviços da S-Gás
           </p>
         </div>
@@ -122,13 +122,13 @@ const ImageGallery = () => {
             >
               <CarouselContent>
                  {galleryImages.map((image, index) => (
-                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                     <div className="p-2">
+                   <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                     <div className="p-1 sm:p-2">
                        <Dialog>
                          <DialogTrigger asChild>
                            <Card className="cursor-pointer overflow-hidden border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                              <CardContent className="p-0">
-                               <div className="w-full h-64">
+                               <div className="w-full h-48 sm:h-56 md:h-64">
                                  <img
                                    src={image.src}
                                    alt={image.alt}
@@ -153,8 +153,8 @@ const ImageGallery = () => {
                    </CarouselItem>
                  ))}
               </CarouselContent>
-              <CarouselPrevious className="left-4" />
-              <CarouselNext className="right-4" />
+              <CarouselPrevious className="left-2 sm:left-4" />
+              <CarouselNext className="right-2 sm:right-4" />
             </Carousel>
           </div>
         ) : (
@@ -164,9 +164,9 @@ const ImageGallery = () => {
         )}
         
         {/* Seção do Vídeo */}
-        <div className="max-w-2xl mx-auto mt-12">
-          <div className="text-center mb-6">
-            <h3 className="text-xl md:text-2xl font-semibold text-jgas-black mb-2">
+        <div className="max-w-xl sm:max-w-2xl mx-auto mt-8 sm:mt-12">
+          <div className="text-center mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-jgas-black mb-2">
               Processo de Abastecimento
             </h3>
           </div>
