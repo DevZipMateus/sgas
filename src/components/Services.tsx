@@ -2,67 +2,41 @@ import { Fuel, Settings, ShoppingCart, Wrench, Phone, CheckCircle } from 'lucide
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import RegionSelectionModal from './RegionSelectionModal';
-
 const Services = () => {
-  const services = [
-    {
-      icon: ShoppingCart,
-      title: "Vendas e Locações de Tanques GLP",
-      description: "Oferecemos tanques de diversos tamanhos para locação ou venda, garantindo o abastecimento contínuo e seguro para seu estabelecimento.",
-      features: [
-        "Tanques de 100kg a 2000kg+",
-        "Locações de Tanques",
-        "Vendas com suporte técnico",
-        "Instalação profissional"
-      ],
-      color: "from-jgas-yellow to-jgas-yellow-dark"
-    },
-    {
-      icon: Settings,
-      title: "Manutenção em Redes de Gás GLP",
-      description: "Serviços especializados de manutenção preventiva e corretiva em redes de distribuição de gás GLP, seguindo rigorosamente as normas de segurança.",
-      features: [
-        "Manutenção preventiva",
-        "Reparos emergenciais",
-        "Testes de estanqueidade",
-        "Certificação técnica"
-      ],
-      color: "from-gray-600 to-jgas-black"
-    },
-    {
-      icon: Wrench,
-      title: "Desenvolvimento de Projetos de Redes de Gás",
-      description: "Elaboramos projetos completos de redes de gás GLP, desde o dimensionamento até a execução, garantindo eficiência e segurança.",
-      features: [
-        "Projeto personalizado",
-        "Dimensionamento técnico",
-        "Documentação completa",
-        "Aprovação nos órgãos competentes"
-      ],
-      color: "from-blue-600 to-blue-800"
-    },
-    {
-      icon: Fuel,
-      title: "Vendas de Gás com Abastecimento a Granel",
-      description: "Fornecimento de gás GLP a granel com abastecimento direto nos tanques, garantindo continuidade operacional.",
-      features: [
-        "Abastecimento programado",
-        "Gás de alta qualidade",
-        "Entrega pontual"
-      ],
-      color: "from-green-600 to-green-800"
-    }
-  ];
-
+  const services = [{
+    icon: ShoppingCart,
+    title: "Vendas e Locações de Tanques GLP",
+    description: "Oferecemos tanques de diversos tamanhos para locação ou venda, garantindo o abastecimento contínuo e seguro para seu estabelecimento.",
+    features: ["Tanques de 100kg a 2000kg+", "Locações de Tanques", "Vendas com suporte técnico", "Instalação profissional"],
+    color: "from-jgas-yellow to-jgas-yellow-dark"
+  }, {
+    icon: Settings,
+    title: "Manutenção em Redes de Gás GLP",
+    description: "Serviços especializados de manutenção preventiva e corretiva em redes de distribuição de gás GLP, seguindo rigorosamente as normas de segurança.",
+    features: ["Manutenção preventiva", "Reparos emergenciais", "Testes de estanqueidade", "Certificação técnica"],
+    color: "from-gray-600 to-jgas-black"
+  }, {
+    icon: Wrench,
+    title: "Desenvolvimento de Projetos de Redes de Gás",
+    description: "Elaboramos projetos completos de redes de gás GLP, desde o dimensionamento até a execução, garantindo eficiência e segurança.",
+    features: ["Projeto personalizado", "Dimensionamento técnico", "Documentação completa", "Aprovação nos órgãos competentes"],
+    color: "from-blue-600 to-blue-800"
+  }, {
+    icon: Fuel,
+    title: "Vendas de Gás com Abastecimento a Granel",
+    description: "Fornecimento de gás GLP a granel com abastecimento direto nos tanques, garantindo continuidade operacional.",
+    features: ["Abastecimento programado", "Gás de alta qualidade", "Entrega pontual"],
+    color: "from-green-600 to-green-800"
+  }];
   const scrollToContact = () => {
     const contactSection = document.getElementById('contato');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="servicos" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+  return <section id="servicos" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-jgas-black mb-4 lg:mb-6">
@@ -74,8 +48,7 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden h-full">
+          {services.map((service, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden h-full">
               <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
               <CardHeader className="text-center pb-4 p-4 sm:p-6">
                 <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
@@ -86,22 +59,16 @@ const Services = () => {
               </CardHeader>
               <CardContent className="flex flex-col justify-between h-full p-4 sm:p-6 pt-0">
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center space-x-2">
+                  {service.features.map((feature, idx) => <li key={idx} className="flex items-center space-x-2">
                       <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-jgas-yellow flex-shrink-0" />
                       <span className="text-xs sm:text-sm text-jgas-gray">{feature}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
-                <Button 
-                  onClick={scrollToContact}
-                  className="w-full bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-sm"
-                >
+                <Button onClick={scrollToContact} className="w-full bg-jgas-yellow text-jgas-black hover:bg-jgas-yellow-light font-semibold text-sm">
                   Saiba Mais
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="bg-jgas-black text-white p-6 sm:p-8 rounded-2xl text-center">
@@ -115,15 +82,13 @@ const Services = () => {
                 Solicitar Orçamento
               </Button>
             </RegionSelectionModal>
-            <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black">
+            <Button size="lg" variant="outline" className="border-jgas-yellow text-jgas-yellow hover:bg-jgas-yellow hover:text-jgas-black rounded-full">
               <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
               Falar com Especialista
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
