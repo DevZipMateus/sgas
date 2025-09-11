@@ -1,7 +1,19 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import Autoplay from "embla-carousel-autoplay";
 
 const ImageGallery = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
   const galleryImages = [
     {
       src: "/lovable-uploads/galeria/midia_1.jpg",
@@ -18,6 +30,50 @@ const ImageGallery = () => {
     {
       src: "/lovable-uploads/galeria/midia_5.jpg",
       alt: "S-Gás - Serviços Especializados"
+    },
+    {
+      src: "/lovable-uploads/galeria/3fc54fa9-8a4b-49e2-baa5-c75dad8857ec.jpeg",
+      alt: "S-Gás - Equipamentos Profissionais"
+    },
+    {
+      src: "/lovable-uploads/galeria/Caminha Sgas.jpg",
+      alt: "S-Gás - Caminhão de Abastecimento"
+    },
+    {
+      src: "/lovable-uploads/galeria/PRIMEGAS.jpeg",
+      alt: "S-Gás - Primegas"
+    },
+    {
+      src: "/lovable-uploads/galeria/Rede 2.jpeg",
+      alt: "S-Gás - Rede de Distribuição"
+    },
+    {
+      src: "/lovable-uploads/galeria/Rede.jpeg",
+      alt: "S-Gás - Sistema de Rede"
+    },
+    {
+      src: "/lovable-uploads/galeria/Tanaques 33.jpeg",
+      alt: "S-Gás - Tanques de Armazenamento"
+    },
+    {
+      src: "/lovable-uploads/galeria/Tanque de Gás S.gás Externo.png",
+      alt: "S-Gás - Tanque Externo"
+    },
+    {
+      src: "/lovable-uploads/galeria/Tanques com Logo.png",
+      alt: "S-Gás - Tanques com Logo"
+    },
+    {
+      src: "/lovable-uploads/galeria/Taqnues.jpg",
+      alt: "S-Gás - Tanques de GLP"
+    },
+    {
+      src: "/lovable-uploads/galeria/Teste de Estanqueidade.jpg",
+      alt: "S-Gás - Teste de Estanqueidade"
+    },
+    {
+      src: "/lovable-uploads/galeria/a0234841-be2b-4a5b-9dd1-b7d378320e5e.jpeg",
+      alt: "S-Gás - Instalação Profissional"
     }
   ];
 
@@ -34,21 +90,57 @@ const ImageGallery = () => {
         </div>
 
         {galleryImages.length > 0 ? (
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-              {galleryImages.map((image, index) => (
-                <div key={index} className="relative overflow-hidden rounded-lg border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-[4/3] w-full">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="max-w-6xl mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: false,
+                })
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {galleryImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2">
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Card className="cursor-pointer overflow-hidden border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <CardContent className="p-0">
+                              <div className="aspect-[4/3] w-full">
+                                <img
+                                  src={image.src}
+                                  alt={image.alt}
+                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                  loading="lazy"
+                                />
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl w-full p-0 border-0">
+                          <div className="relative">
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-auto max-h-[80vh] object-contain"
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
         ) : (
           <div className="text-center py-12">
