@@ -89,11 +89,6 @@ const ImageGallery = () => {
       src: "/lovable-uploads/galeria/a0234841-be2b-4a5b-9dd1-b7d378320e5e.jpeg",
       alt: "S-Gás - Instalação Profissional",
       type: "image"
-    },
-    {
-      src: "/lovable-uploads/galeria/ABASTECIMENTO.mp4",
-      alt: "S-Gás - Processo de Abastecimento",
-      type: "video"
     }
   ];
 
@@ -126,58 +121,37 @@ const ImageGallery = () => {
               className="w-full"
             >
               <CarouselContent>
-                {galleryImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-2">
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Card className="cursor-pointer overflow-hidden border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <CardContent className="p-0">
-                              <div className="w-full h-64">
-                                {image.type === "video" ? (
-                                  <video
-                                    src={image.src}
-                                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                                    controls
-                                    muted
-                                    playsInline
-                                  />
-                                ) : (
-                                  <img
-                                    src={image.src}
-                                    alt={image.alt}
-                                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                                    loading="lazy"
-                                  />
-                                )}
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-4xl w-full p-0 border-0">
-                          <div className="relative">
-                            {image.type === "video" ? (
-                              <video
-                                src={image.src}
-                                className="w-full h-auto max-h-[80vh] object-contain"
-                                controls
-                                autoPlay
-                                muted
-                                playsInline
-                              />
-                            ) : (
-                              <img
-                                src={image.src}
-                                alt={image.alt}
-                                className="w-full h-auto max-h-[80vh] object-contain"
-                              />
-                            )}
-                          </div>
-                        </DialogContent>
-                      </Dialog>
-                    </div>
-                  </CarouselItem>
-                ))}
+                 {galleryImages.map((image, index) => (
+                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                     <div className="p-2">
+                       <Dialog>
+                         <DialogTrigger asChild>
+                           <Card className="cursor-pointer overflow-hidden border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                             <CardContent className="p-0">
+                               <div className="w-full h-64">
+                                 <img
+                                   src={image.src}
+                                   alt={image.alt}
+                                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                                   loading="lazy"
+                                 />
+                               </div>
+                             </CardContent>
+                           </Card>
+                         </DialogTrigger>
+                         <DialogContent className="max-w-4xl w-full p-0 border-0">
+                           <div className="relative">
+                             <img
+                               src={image.src}
+                               alt={image.alt}
+                               className="w-full h-auto max-h-[80vh] object-contain"
+                             />
+                           </div>
+                         </DialogContent>
+                       </Dialog>
+                     </div>
+                   </CarouselItem>
+                 ))}
               </CarouselContent>
               <CarouselPrevious className="left-4" />
               <CarouselNext className="right-4" />
@@ -188,6 +162,25 @@ const ImageGallery = () => {
             <p className="text-jgas-gray text-lg">Galeria em breve...</p>
           </div>
         )}
+        
+        {/* Seção do Vídeo */}
+        <div className="max-w-4xl mx-auto mt-12">
+          <div className="text-center mb-6">
+            <h3 className="text-xl md:text-2xl font-semibold text-jgas-black mb-2">
+              Processo de Abastecimento
+            </h3>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-lg bg-white">
+            <video
+              src="/lovable-uploads/galeria/ABASTECIMENTO.mp4"
+              className="w-full h-auto"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
