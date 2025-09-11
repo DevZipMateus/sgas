@@ -113,11 +113,11 @@ const ImageGallery = () => {
                         <DialogTrigger asChild>
                           <Card className="cursor-pointer overflow-hidden border border-jgas-yellow/20 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <CardContent className="p-0">
-                              <div className="aspect-[4/3] w-full">
+                              <div className="w-full h-64">
                                 <img
                                   src={image.src}
                                   alt={image.alt}
-                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                                   loading="lazy"
                                 />
                               </div>
