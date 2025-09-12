@@ -61,16 +61,6 @@ const ImageGallery = () => {
       type: "image"
     },
     {
-      src: "/lovable-uploads/galeria/Tanaques 33.jpeg",
-      alt: "S-Gás - Tanques de Armazenamento",
-      type: "image"
-    },
-    {
-      src: "/lovable-uploads/galeria/Taqnues.jpg",
-      alt: "S-Gás - Tanques de GLP",
-      type: "image"
-    },
-    {
       src: "/lovable-uploads/galeria/Teste de Estanqueidade.jpg",
       alt: "S-Gás - Teste de Estanqueidade",
       type: "image"
