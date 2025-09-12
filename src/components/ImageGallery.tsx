@@ -66,16 +66,6 @@ const ImageGallery = () => {
       type: "image"
     },
     {
-      src: "/lovable-uploads/galeria/Tanque de Gás S.gás Externo.png",
-      alt: "S-Gás - Tanque Externo",
-      type: "image"
-    },
-    {
-      src: "/lovable-uploads/galeria/Tanques com Logo.png",
-      alt: "S-Gás - Tanques com Logo",
-      type: "image"
-    },
-    {
       src: "/lovable-uploads/galeria/Taqnues.jpg",
       alt: "S-Gás - Tanques de GLP",
       type: "image"
