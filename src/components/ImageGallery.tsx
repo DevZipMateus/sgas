@@ -16,16 +16,6 @@ const ImageGallery = () => {
   
   const galleryImages = [
     {
-      src: "/lovable-uploads/galeria/midia_1.jpg",
-      alt: "S-Gás - Equipamentos e Serviços",
-      type: "image"
-    },
-    {
-      src: "/lovable-uploads/galeria/midia_3.jpg", 
-      alt: "S-Gás - Instalações Profissionais",
-      type: "image"
-    },
-    {
       src: "/lovable-uploads/galeria/midia_4.jpg",
       alt: "S-Gás - Infraestrutura e Equipamentos",
       type: "image"
